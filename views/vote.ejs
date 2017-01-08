@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>AskIt | Create and share poll</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/style/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<header class="row page-header"><a href="/" class="link-unstyled"><h1>AskIT</h1></a><div>Create and share poll has never been so easy !</div></header>
+			<form method="post" action="/vote" class="form-horizontal form-vote">
+				<fieldset>
+					<input type="hidden" name="id_poll" value="<%= poll.id_poll %>">
+					<div class="row poll-title">
+					  <div class="col-xs-12 text-center"><%= poll.libelle_poll %></div>  
+					</div>
+					<div class="form-group option-vote">
+						<label class="col-md-4 control-label" for="options">Choose an option :</label>
+						<div class="col-md-4">
+							<% for(var i = 0 ; i < options.length ; i++) {%>
+								<% if(poll.multi == true){%>
+									<div class="checkbox">
+							    		<label for="option-<%= i %>">
+							      			<input type="checkbox" name="vote" id="option-<%= i %>" value="<%= options[i].id_option %>" required>
+							      			<%= options[i].libelle_option %>
+							    		</label>
+									</div>
+								<% }else { %>
+									<div class="radio">
+							    		<label for="option-<%= i %>">
+							      			<input type="radio" name="vote" id="option-<%= i %>" value="<%= options[i].id_option %>">
+							      			<%= options[i].libelle_option %>
+							    		</label>
+									</div>
+								<% } %>
+							<% } %>
+							<span class="help-block hidden error-vote">You didn't choose anything !</span>  
+						</div>
+					</div>
+					<div class="form-group">
+			  			<label class="col-md-4 control-label" for="valider"></label>
+			  			<div class="col-md-4">
+			    			<button type="button" id="valider" name="valider" class="btn btn-primary btn-block">Vote</button>
+			  			</div>
+					</div>
+				</fieldset>
+			</form> 
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+        <script src="js/index.js"></script>    
+	</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "AskIt",
+  "version": "1.0.0",
+  "description": "Website for online polls, allows you to create, share polls and to see the evolution of the result in real time.",
+  "author": "Francony Romain",
+  "main": "app.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/RomainFrancony/AskIt"
+},
+  "bugs": {
+  "url": "https://github.com/RomainFrancony/AskIt/issues"
+},
+  "dependencies": {
+    "socket.io": "1.7.x",
+    "pg": "6.1.x",
+    "express": "4.14.x",
+    "randomcolor": "0.4.x",
+    "ejs": "2.5.x",
+    "serve-favicon": "2.3.x",
+    "body-parser": "1.15.x",
+    "cookie-session": "2.0.0-alpha.2"
+  },  
+  "license": "MIT"
+}
