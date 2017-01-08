@@ -1,10 +1,6 @@
-# Project Title
+# Ask It
 
 Inspire from [strawpoll](strawpoll.me) ,this is an website that allows you to create share polls, you can see the evolution of the result in real time. I developed his application in order to discover Node.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
