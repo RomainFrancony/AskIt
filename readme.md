@@ -29,7 +29,7 @@ pg://user:password@host:port/database
 node app.js
 ```
 
-* The application is now launched, go at the following adress :
+* The application is now launched, go at the following address :
 
 ```
 http://localhost:8080
