@@ -1,6 +1,6 @@
 # Ask It
 
-Inspire from [strawpoll](strawpoll.me) ,this is an website that allows you to create share polls, you can see the evolution of the result in real time. I developed his application in order to discover Node.
+Inspire from [strawpoll](http://strawpoll.me) ,this is an website that allows you to create share polls, you can see the evolution of the result in real time. I developed his application in order to discover Node.
 
 ### Prerequisites
 
@@ -37,18 +37,12 @@ http://localhost:8080
 
 ## Built With
 
-*[Node.js](https://nodejs.org/en/)
-*[Bootstrap](http://getbootstrap.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Bootstrap](http://getbootstrap.com/)
 
 See the [package.json](package.json) for the npm modules used.
 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
