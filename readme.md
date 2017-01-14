@@ -9,7 +9,7 @@ Inspire from [strawpoll](http://strawpoll.me) ,this is an website that allows yo
 
 ### Installing
 
-* Download this repositerie, install the dependencies with npm via the Windows console :
+* Download this repository , install the dependencies with npm via the Windows console :
 
 ```
 npm install
