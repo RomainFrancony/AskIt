@@ -28,7 +28,7 @@ var favicon = require('serve-favicon');
 app.use(favicon(__dirname + '/views/img/favicon.ico'));
 
 
-//Cocket
+//Socket
 io.sockets.on('connect',  function(socket) {
 	socket.on('joinRoom',function(room){
 		socket.join(room);
@@ -65,16 +65,15 @@ app.post('/create',urlencodedParser, function(req,res){
 					if(resultOption == true){
 						res.redirect("/"+id_poll+"/result");
 					}else{
-						//error
+						res.redirect("/");
 					}
 				})
 			}else{
-				//erorr
+				res.redirect("/");
 			}
 		})	
 	}else{
-		//redirect error
-		console.log("error");
+		res.redirect("/");
 	}	
 });
 
@@ -84,7 +83,6 @@ app.get('/:id([0-9]+)/result', function(req, res) {
 		if(pollResult != false){
 			res.render("result.ejs",{poll:pollResult,options:optionsResult});
 		}else{
-			//message err
 			res.redirect("/");
 		}
 	})
@@ -102,7 +100,6 @@ app.get('/:id([0-9]+)', function(req, res) {
 			if(pollResult != false){
 				res.render("vote.ejs",{poll:pollResult,options:optionsResult});
 			}else{
-				//message err
 				res.redirect("/");
 			}
 		})
@@ -139,7 +136,6 @@ app.post('/vote',urlencodedParser, function(req,res){
 				}
 			});	
 		}else{
-			//error
 			backURL=req.header('Referer') || '/';
 			res.redirect(backURL);
 		}

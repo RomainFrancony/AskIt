@@ -8,7 +8,12 @@ $(function() {
 	    document.execCommand("copy");
         document.body.removeChild(link);
         //alert
-        $('.share').parent().append("<span class='message'>Link copied into clipboard</span>")  
+        $('.share').append("<div class='arrow'></div><span class='message'>Link copied into clipboard</span>");
+	      setTimeout(function() {
+	        $('.message, .arrow').fadeOut('500', function() {
+	          $(".message, .arrow").remove();
+	        });
+	      }, 1500);
 		
 	});
 
@@ -18,16 +23,12 @@ $(function() {
 	  socket.emit('joinRoom',$('#id_poll').val());
 	});
 
+	//Update de votes
 	socket.on('vote', function (poll,options) {
     	for (var i = 0; i < options.length; i++) {
     		$('#'+options[i].id_option).find('.progress-bar').css('width', options[i].vote / poll.vote *100 +'%');
     		$('#'+options[i].id_option).find('.vote').html(Math.round(options[i].vote / poll.vote *100) +'%');
     	}
     	$('.total').html("TOTAL : "+poll.vote+" votes");
-  //   	options.sort(function(a, b) {
-		//     return Math.round(b.vote / poll.vote *100) - Math.round(a.vote / poll.vote *100);
-		// });
-		// $('.winner').removeClass('winner')
-		// $('#'+options[0].id_option).addClass('winner');
 	});
 });
