@@ -25,7 +25,7 @@ app.use(express.static('views'));
 
 //Favicon middleware
 var favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/views/img/favicon.ico'));
+app.use(favicon(__dirname + '/views/img/favicon.png'));
 
 
 //Socket
