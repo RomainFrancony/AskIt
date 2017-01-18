@@ -8,12 +8,12 @@ $(function() {
 	    document.execCommand("copy");
         document.body.removeChild(link);
         //alert
-        $('.share').append("<div class='arrow'></div><span class='message'>Link copied into clipboard</span>");
+        $('.share').parents(".row").after("<div class='row'><div class='pull-right col-xs-12'><div class='arrow'></div><span class='message'>Link copied into clipboard</span></div></div>");
 	      setTimeout(function() {
 	        $('.message, .arrow').fadeOut('500', function() {
 	          $(".message, .arrow").remove();
 	        });
-	      }, 1500);
+	      }, 15000000000);
 		
 	});
 	
