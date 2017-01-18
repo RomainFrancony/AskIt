@@ -2,6 +2,11 @@
 
 Inspire from [strawpoll](http://strawpoll.me) ,this is an website that allows you to create share polls, you can see the evolution of the result in real time. I developed his application in order to discover Node.
 
+### Live demo
+
+Click [here](https://justaskit.herokuapp.com/) to try the application.
+
+
 ### Prerequisites
 
 * Download and install [Node.js](https://nodejs.org/en/)
