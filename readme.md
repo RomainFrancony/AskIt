@@ -1,6 +1,6 @@
 # Ask It
 
-Inspire from [strawpoll](http://strawpoll.me) ,this is an website that allows you to create share polls, you can see the evolution of the result in real time. I developed his application in order to discover Node.
+Inspire from [strawpoll](http://strawpoll.me), this is a website that allows you to create share polls, you can see the evolution of the result in real time. I developed this application in order to discover Node.
 
 ### Live demo
 
